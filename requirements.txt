@@ -203,6 +203,7 @@ pywhatkit==5.4
 pywin32==306
 pywin32-ctypes==0.2.2
 pywinpty==2.0.14
+pywin32==<version>; platform_system=="Windows"
 PyYAML==6.0.1
 pyzmq==26.2.0
 rarfile==4.2
