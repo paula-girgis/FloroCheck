@@ -1,3 +1,4 @@
+pywin32==306
 absl-py==2.1.0
 accelerate==0.32.1
 aiofiles==23.2.1
