@@ -200,7 +200,7 @@ pyttsx3==2.90
 pytweening==1.2.0
 pytz==2024.1
 pywhatkit==5.4
-pywin32==306 ; sys_platform == 'win32'
+pywin32==306
 pywin32-ctypes==0.2.2
 pywinpty==2.0.14
 PyYAML==6.0.1
@@ -261,6 +261,7 @@ uritemplate==4.1.1
 urllib3==2.2.1
 utils==1.0.2
 uvicorn==0.30.1
+waitress==3.0.2
 wasabi==1.1.2
 watchfiles==0.22.0
 wcwidth==0.2.13
