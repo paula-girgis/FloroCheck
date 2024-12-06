@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import tensorflow as tf
 from PIL import Image, UnidentifiedImageError
 import numpy as np
-from waitress import serve
+
 
 app = Flask(__name__)
 
@@ -75,10 +75,10 @@ def predict():
         
 
         # # Set a confidence threshold to filter out invalid images
-        # threshold = 0.5  # Adjust this based on your model's behavior
+        threshold = 0.68  # Adjust this based on your model's behavior
         
-        # if max_confidence < threshold:
-        #     return jsonify({'error': 'Invalid photo. Please upload a plant leaf image.'}), 400
+        if max_confidence < threshold:
+            return jsonify({'error': 'Invalid photo. Please upload a plant leaf image.'}), 400
 
         # Map the predicted class index to the class name
         if predicted_class_idx in class_map:
@@ -100,4 +100,4 @@ def not_found_error(error):
     return jsonify({'error': 'Not Found. The API endpoint you are trying to access does not exist.'}), 404
 
 if __name__ == '__main__':
-    serve(app, host="0.0.0.0", port=8080)
+    app.run()
